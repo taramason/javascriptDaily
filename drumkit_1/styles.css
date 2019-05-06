@@ -1,0 +1,33 @@
+.keys {
+  display: flex;
+  justify-content: center;
+  margin-top: 44vh;
+}
+
+.key {
+  padding: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px;
+  min-width: 60px;
+  transition:all 0.07s;
+}
+
+.playing {
+  transform:scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 10px #ffc600;
+}
+
+kbd {
+  margin: auto;
+  font-size: 20px;
+}
+
+.sound {
+  text-transform: uppercase;
+  font-size: 10px;
+  margin: auto;
+}
