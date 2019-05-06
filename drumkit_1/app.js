@@ -8,4 +8,17 @@ function playSound(e) {
     key.classList.add('playing'); //add class for key animation
 }
 
+function removeTransition(e) {
+  if (e.propertyName !== 'transform') {
+    return;
+  }
+  console.log(e.propertyName);
+  console.log("this", this);
+  this.classList.remove('playing');
+  console.log("transitioned removed");
+}
+
+const keys = document.querySelectorAll('.key');
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+window.addEventListener('keydown', playSound);
 
